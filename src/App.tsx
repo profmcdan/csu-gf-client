@@ -8,11 +8,9 @@ const App: React.FC = () => {
   return (
     <Router>
       <Header />
-      <div className="container">
-        <Switch>
-          <Route exact path="/" component={Home} />
-        </Switch>
-      </div>
+      <Switch>
+        <Route exact path="/" component={Home} />
+      </Switch>
     </Router>
   );
 };
