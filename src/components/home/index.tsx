@@ -2,6 +2,7 @@ import React, { Fragment } from 'react';
 import MapImage from './images/map.png';
 import Membership from './Membership';
 import './index.css';
+import Testimonials from './Testimonials';
 
 export default function index() {
   return (
@@ -26,6 +27,7 @@ export default function index() {
       <div className="container-fluid membership-panel">
         <Membership />
       </div>
+      <Testimonials />
     </Fragment>
   );
 }
