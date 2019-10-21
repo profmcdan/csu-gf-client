@@ -1,0 +1,17 @@
+.map-panel {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 80px;
+}
+
+.connect {
+  padding-top: 120px;
+  width: 33%;
+}
+
+.connect-text {
+  color: #ab4c38;
+  font-size: 34px;
+  font-style: oblique;
+  font-weight: bold;
+}

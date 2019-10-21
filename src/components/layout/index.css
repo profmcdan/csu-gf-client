@@ -1,0 +1,15 @@
+.btn-rounded {
+  color: #ffffff;
+  letter-spacing: 1px;
+  border-radius: 5px;
+  transition: all 0.3s ease 0s;
+  background-color: #ab4c38;
+  font-size: 14px;
+}
+
+.nav-text {
+  color: #ab4c38;
+}
+.nav-text-white {
+  color: #ffffff;
+}

@@ -20,3 +20,9 @@
 .App-link {
   color: #09d3ac;
 }
+
+.main-bar {
+  background-color: white;
+  border-bottom: 1px solid wheat;
+  box-shadow: 5px 5px #ffafaf;
+}
