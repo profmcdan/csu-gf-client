@@ -5,7 +5,7 @@ import './auth.css';
 export default function index() {
   return (
     <Fragment>
-      <div className="container-fluid register-panel">
+      <div className="container-fluid auth-panel">
         <div className="row mt-4">
           <div className="col-md-4 offset-md-4">
             <div className="card shadow-sm">

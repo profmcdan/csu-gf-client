@@ -1,7 +1,9 @@
-.register-panel{
+.auth-panel{
+    margin-top:5px;
     padding-top:80px;
     padding-bottom:80px;
     background-color: #fefbf6;
+    min-height: calc(100vh - 65px);
 }
 
 .form-header-text {
@@ -33,7 +35,24 @@
     color: #ab4c38;
 }
 
-.register-panel .card{
+.auth-panel .card{
     max-width: 350px;
     margin: auto;
+}
+.btn-fb{
+    background-color: #345a95;
+}
+.btn-google{
+    background-color: #dd3127;
+}
+.social-login .btn{
+    width:150px;
+}
+.social-login button.has-icon{
+    position: relative;
+    padding-left:30px;
+}
+.social-login button.has-icon .icon-container{
+    position: absolute;
+    left:10px;
 }

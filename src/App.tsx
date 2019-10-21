@@ -4,6 +4,7 @@ import './App.css';
 import Header from './components/layout/Header';
 import Home from './components/home';
 import Register from './components/auth/Register';
+import Login from './components/auth/Login';
 
 const App: React.FC = () => {
   return (
@@ -12,6 +13,7 @@ const App: React.FC = () => {
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/register" component={Register} />
+        <Route exact path="/login" component={Login} />
       </Switch>
     </Router>
   );
