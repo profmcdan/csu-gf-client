@@ -7,7 +7,7 @@ export default function index() {
     <Fragment>
       <div className="container-fluid register-panel">
         <div className="row mt-4">
-          <div className="col-md-4 offset-4">
+          <div className="col-md-4 offset-md-4">
             <div className="card shadow">
               <div className="card-header form-header">
                 <h3 className="mb-1 form-header-text">
