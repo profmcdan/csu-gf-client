@@ -32,3 +32,8 @@
 .text-default{
     color: #ab4c38;
 }
+
+.register-panel .card{
+    max-width: 350px;
+    margin: auto;
+}
