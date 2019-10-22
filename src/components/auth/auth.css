@@ -1,0 +1,58 @@
+.auth-panel{
+    margin-top:5px;
+    padding-top:80px;
+    padding-bottom:80px;
+    background-color: #fefbf6;
+    min-height: calc(100vh - 65px);
+}
+
+.form-header-text {
+    color: #ab4c38;
+    font-size: 24px;
+    font-style: oblique;
+    font-weight: bold;
+}
+.card-header.form-header {
+    background-color: #fff;
+}
+.form-control {
+    display: block;
+    width: 100%;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #71748d;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #d2d2e4;
+    border-radius: 2px;
+}
+.btn {
+    font-size: 14px;
+    padding: 9px 16px;
+    border-radius: 2px;
+}
+.text-default{
+    color: #ab4c38;
+}
+
+.auth-panel .card{
+    max-width: 350px;
+    margin: auto;
+}
+.btn-fb{
+    background-color: #345a95;
+}
+.btn-google{
+    background-color: #dd3127;
+}
+.social-login .btn{
+    width:150px;
+}
+.social-login button.has-icon{
+    position: relative;
+    padding-left:30px;
+}
+.social-login button.has-icon .icon-container{
+    position: absolute;
+    left:10px;
+}
