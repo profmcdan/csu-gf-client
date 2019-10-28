@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
+import Logo from '../layout/images/csu-logo.png';
 import './auth.css';
 
 export default function index() {
@@ -7,49 +8,63 @@ export default function index() {
     <Fragment>
       <div className="container-fluid auth-panel">
         <div className="row mt-4">
-          <div className="col-md-4 offset-md-4">
-            <div className="card shadow-sm">
-              <div className="card-header form-header">
-                <h3 className="mb-1 form-header-text">
-                  Log In
+          <div className="col-md-12 auth-container">
+            <div className="card auth-card border-0" >
+              <div className="card-header form-header border-0">
+                <div className="text-center py-3">
+                  <Link className="text-default" to="/">
+                    <img src={Logo} alt=""/>
+                  </Link>
+                </div>
+                <h3 className="mb-1 form-header-text text-center">
+                  Log In To Your Account
                 </h3>
               </div>
               <div className="card-body">
                 <form action="">
                   <div className="form-group">
                     <label>Email Address</label>
-                    <input type="text" className="form-control" id="email" aria-describedby="emailHelp" placeholder="" />
+                    <input type="text" className="form-control input-lg" id="email" aria-describedby="emailHelp" placeholder="" />
                   </div>
                   <div className="form-group">
                     <label>Password</label>
-                    <input type="password" className="form-control" id="password" placeholder="" />
+                    <input type="password" className="form-control input-lg" id="password" placeholder="" />
                   </div>
-                  <button type="button" className="btn btn-rounded btn-block">
+                  <button type="button" className="btn btn-rounded btn-block btn-lg">
                     Log In
                   </button>
                 </form>
-                <div className="social-login mt-4 mb-3">
-                  <hr className="mb-2"/>
+                <div className="py-3 text-center">
+                  <p className="mb-0">
+                    <span>I don't have an account.</span>&nbsp;
+                    <strong>
+                      <Link className="text-default" to="/register">
+                        Register
+                      </Link>
+                      </strong>
+                  </p>
+                </div>
+                <div className="social-login mt-2 mb-3">
                   
-                  <p className="text-center">OR connect with</p>
-                  <div className="d-flex justify-content-between">
-                    <button className="btn btn-rounded btn-fb has-icon">
-                      <span className="icon-container"><i className="fa fa-facebook"></i></span> Facebook
-                    </button>
-                    <button className="btn btn-rounded btn-google has-icon">
-                    <span className="icon-container"><i className="fa fa-google"></i></span> Google
-                    </button>
+                  <div className="row">
+                    <div className="col-md-6 col-sm-6">
+                      <button className="btn btn-rounded has-icon btn-lg btn-fb text-default">
+                        <span className="icon-container"><i className="fa fa-facebook fb-color"></i></span> <span className="text-container">Login with Facebook</span>
+                      </button>
+                    </div>
+                    <div className="col-md-6 col-sm-6">
+                      <button className="btn btn-rounded btn-google has-icon btn-lg text-default">
+                        <span className="icon-container">
+                          <img src="https://img.icons8.com/color/50/000000/google-logo.png"/>
+                        </span> <span className="text-container">Login with Google</span>
+                      </button>
+                    </div>
                   </div>
                 </div>
                 
               </div>
               <div className="card-footer form-footer">
-                <p>
-                  <span>Don't Have An Account ? </span>
-                  <Link className="text-default" to="/register">
-                    Sign Up Here
-                  </Link>
-                </p>
+                
               </div>
             </div>
           </div>
