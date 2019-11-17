@@ -1,6 +1,7 @@
 export interface IState {
   auth: IAuth;
   user: IUser;
+  members: any;
 }
 
 export interface IAction {

@@ -4,15 +4,7 @@ import './index.css';
 import { Store } from '../../configureStore';
 import Logo from './images/logo.png';
 import axios from 'axios';
-import {
-  Navbar,
-  Nav,
-  NavDropdown,
-  Form,
-  FormControl,
-  Button,
-  Container,
-} from 'react-bootstrap';
+import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
 import { BASE_URL } from '../../config';
 import { GET_USER, LOGOUT } from '../../actions';
 
@@ -64,7 +56,9 @@ const Header = () => {
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="mr-auto">
                 <Nav.Link href="/">Home</Nav.Link>
-                <Nav.Link href="/members">Members</Nav.Link>
+                <Nav.Link href="#!">
+                  <Link to="/members">Members</Link>
+                </Nav.Link>
                 <Nav.Link href="/events">Eventz</Nav.Link>
                 <Nav.Link href="/resources">Resources</Nav.Link>
 
@@ -89,20 +83,20 @@ const Header = () => {
                   {state.auth.isLoggedIn ? (
                     <>
                       <NavDropdown title="My Settings" id="basic-nav-dropdown">
-                        <NavDropdown.Item>
+                        <NavDropdown.Item href="#!">
                           <span className="nav-text">
                             {state.user.last_name} {state.user.first_name}
                           </span>
                         </NavDropdown.Item>
                         <NavDropdown.Divider />
-                        <NavDropdown.Item href="/update-profile">
-                          Update Profile
+                        <NavDropdown.Item href="#!">
+                          <Link to="/update-profile">Update Profile</Link>
                         </NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.3">
+                        <NavDropdown.Item href="#!">
                           Get a Mentor
                         </NavDropdown.Item>
                         <NavDropdown.Divider />
-                        <NavDropdown.Item href="#action/3.4">
+                        <NavDropdown.Item href="#!">
                           <Link className="nav-link" to="/login">
                             <a className="nav-text" onClick={handleLogout}>
                               Logout

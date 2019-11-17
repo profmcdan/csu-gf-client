@@ -5,7 +5,7 @@ import Logo from './images/logo.png';
 
 export default function Footer() {
   return (
-    <Fragment>
+    <footer>
       <div className="container-fluid main-bar">
         <div className="container">
           <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -60,6 +60,6 @@ export default function Footer() {
           </nav>
         </div>
       </div>
-    </Fragment>
+    </footer>
   );
 }

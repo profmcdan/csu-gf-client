@@ -16,6 +16,7 @@ const initialState: IState = {
     phone: '',
     email: '',
   },
+  members: [],
 };
 
 export const Store = createContext<IState | any>(initialState);

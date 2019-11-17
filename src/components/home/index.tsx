@@ -8,10 +8,6 @@ import { Store } from '../../configureStore';
 const Home = () => {
   const { state, dispatch } = useContext(Store);
 
-  useEffect(() => {
-    console.log(state);
-  }, []);
-
   return (
     <Fragment>
       <div className="container map-panel">

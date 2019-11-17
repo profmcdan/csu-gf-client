@@ -1,0 +1,14 @@
+.mainframe {
+  padding-top: 20px;
+  margin: auto;
+  padding-bottom: 30px;
+}
+
+.invalid-feedback {
+  display: block !important;
+}
+
+.profile-form {
+  width: 70%;
+  margin: auto;
+}
