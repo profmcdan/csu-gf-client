@@ -147,19 +147,6 @@ const ProfileSettings = (props: any) => {
                 Female
               </label>
             </div>
-            <div className="form-check form-check-inline">
-              <input
-                className="form-check-input"
-                type="radio"
-                name="genderOptions"
-                value=" Non-binary"
-                id="inlineRadio3"
-                ref={register}
-              />
-              <label className="form-check-label" htmlFor="inlineRadio3">
-                Non-binary
-              </label>
-            </div>
           </div>
           <div className="form-group">
             <input

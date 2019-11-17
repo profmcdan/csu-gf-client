@@ -60,24 +60,12 @@ const Header = (props: any) => {
                 <Nav.Link href="#!">
                   <Link to="/members">Members</Link>
                 </Nav.Link>
-                <Nav.Link href="/events">Eventz</Nav.Link>
-                <Nav.Link href="/resources">Resources</Nav.Link>
-
-                <NavDropdown title="Actions" id="basic-nav-dropdown">
-                  <NavDropdown.Item href="#action/3.1">
-                    Connect
-                  </NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.2">
-                    Be a Mentor
-                  </NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.3">
-                    Get a Mentor
-                  </NavDropdown.Item>
-                  <NavDropdown.Divider />
-                  <NavDropdown.Item href="#action/3.4">
-                    Update Profile
-                  </NavDropdown.Item>
-                </NavDropdown>
+                <Nav.Link href="#!">
+                  <Link to="/eventz">Eventz</Link>
+                </Nav.Link>
+                <Nav.Link href="#!">
+                  <Link to="/resources">Resources</Link>
+                </Nav.Link>
               </Nav>
               <div className="my-2 my-lg-0">
                 <ul className="navbar-nav">
