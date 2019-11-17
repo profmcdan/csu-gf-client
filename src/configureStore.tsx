@@ -4,10 +4,17 @@ import { reducer } from './reducers';
 
 const initialState: IState = {
   auth: {
-    username: '',
-    email: '',
-    role: '',
     isLoggedIn: false,
+    accessToken: '',
+    refreshToken: '',
+  },
+  user: {
+    id: undefined,
+    first_name: '',
+    last_name: '',
+    middle_name: '',
+    phone: '',
+    email: '',
   },
 };
 

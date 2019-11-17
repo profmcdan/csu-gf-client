@@ -1,10 +1,141 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './index.css';
 import { Store } from '../../configureStore';
 import Logo from './images/logo.png';
+import axios from 'axios';
+import {
+  Navbar,
+  Nav,
+  NavDropdown,
+  Form,
+  FormControl,
+  Button,
+  Container,
+} from 'react-bootstrap';
+import { BASE_URL } from '../../config';
+import { GET_USER, LOGOUT } from '../../actions';
 
-export default function Header() {
+const Header = () => {
+  const { state, dispatch } = useContext(Store);
+
+  useEffect(() => {
+    if (state.auth.isLoggedIn) {
+      getUserDetails();
+    }
+  }, [state.auth.isLoggedIn]);
+
+  const getUserDetails = async () => {
+    try {
+      const accessToken = localStorage.getItem('accessToken');
+      const config = {
+        headers: { Authorization: 'Bearer ' + accessToken },
+      };
+      const res = await axios.get(`${BASE_URL}/auth/user/me`, config);
+      const { data } = res;
+      return dispatch({
+        type: GET_USER,
+        payload: data,
+      });
+    } catch (error) {
+      console.log(error.response.data);
+    }
+  };
+
+  const handleLogout = () => {
+    localStorage.removeItem('accessToken');
+    localStorage.removeItem('refreshToken');
+    return dispatch({
+      type: LOGOUT,
+      payload: { isLoggedIn: false, accessToken: '', refreshToken: '' },
+    });
+  };
+
+  return (
+    <Fragment>
+      {console.log('New State ==> ', state)}
+      <div className="container-fluid main-bar">
+        <div>
+          <Navbar bg="light" expand="lg">
+            <Navbar.Brand href="/">
+              <img src={Logo} height="30px" width="30px" alt="CSU-GF" />
+            </Navbar.Brand>
+            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar.Collapse id="basic-navbar-nav">
+              <Nav className="mr-auto">
+                <Nav.Link href="/">Home</Nav.Link>
+                <Nav.Link href="/members">Members</Nav.Link>
+                <Nav.Link href="/events">Eventz</Nav.Link>
+                <Nav.Link href="/resources">Resources</Nav.Link>
+
+                <NavDropdown title="Actions" id="basic-nav-dropdown">
+                  <NavDropdown.Item href="#action/3.1">
+                    Connect
+                  </NavDropdown.Item>
+                  <NavDropdown.Item href="#action/3.2">
+                    Be a Mentor
+                  </NavDropdown.Item>
+                  <NavDropdown.Item href="#action/3.3">
+                    Get a Mentor
+                  </NavDropdown.Item>
+                  <NavDropdown.Divider />
+                  <NavDropdown.Item href="#action/3.4">
+                    Update Profile
+                  </NavDropdown.Item>
+                </NavDropdown>
+              </Nav>
+              <div className="my-2 my-lg-0">
+                <ul className="navbar-nav">
+                  {state.auth.isLoggedIn ? (
+                    <>
+                      <NavDropdown title="My Settings" id="basic-nav-dropdown">
+                        <NavDropdown.Item>
+                          <span className="nav-text">
+                            {state.user.last_name} {state.user.first_name}
+                          </span>
+                        </NavDropdown.Item>
+                        <NavDropdown.Divider />
+                        <NavDropdown.Item href="/update-profile">
+                          Update Profile
+                        </NavDropdown.Item>
+                        <NavDropdown.Item href="#action/3.3">
+                          Get a Mentor
+                        </NavDropdown.Item>
+                        <NavDropdown.Divider />
+                        <NavDropdown.Item href="#action/3.4">
+                          <Link className="nav-link" to="/login">
+                            <a className="nav-text" onClick={handleLogout}>
+                              Logout
+                            </a>
+                          </Link>
+                        </NavDropdown.Item>
+                      </NavDropdown>
+                    </>
+                  ) : (
+                    <Fragment>
+                      <li className="nav-item">
+                        <Link className="nav-link" to="/login">
+                          <span className="nav-text">Login</span>
+                        </Link>
+                      </li>
+                      <li className="nav-item">
+                        <Link className="nav-link btn-rounded" to="/register">
+                          <span className="nav-text-white">Get Started</span>
+                        </Link>
+                      </li>
+                    </Fragment>
+                  )}
+                </ul>
+              </div>
+            </Navbar.Collapse>
+          </Navbar>
+        </div>
+      </div>
+    </Fragment>
+  );
+};
+
+const OldHeader = () => {
   const { state, dispatch } = React.useContext(Store);
   return (
     <Fragment>
@@ -74,4 +205,6 @@ export default function Header() {
       </div>
     </Fragment>
   );
-}
+};
+
+export default Header;

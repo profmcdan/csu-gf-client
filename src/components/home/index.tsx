@@ -1,10 +1,17 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useContext, useEffect } from 'react';
 import MapImage from './images/map.png';
 import Membership from './Membership';
 import './index.css';
 import Testimonials from './Testimonials';
+import { Store } from '../../configureStore';
 
-export default function index() {
+const Home = () => {
+  const { state, dispatch } = useContext(Store);
+
+  useEffect(() => {
+    console.log(state);
+  }, []);
+
   return (
     <Fragment>
       <div className="container map-panel">
@@ -30,4 +37,6 @@ export default function index() {
       <Testimonials />
     </Fragment>
   );
-}
+};
+
+export default Home;
