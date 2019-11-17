@@ -44,7 +44,7 @@ const Members = (props: any) => {
               <th>First Name</th>
               <th>Last Name</th>
               <th>Department</th>
-              <th>Year of Graduatiom</th>
+              <th>Year of Graduation</th>
               <th>Phone Number</th>
             </tr>
           </thead>

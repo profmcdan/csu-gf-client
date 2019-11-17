@@ -8,7 +8,7 @@ import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
 import { BASE_URL } from '../../config';
 import { GET_USER, LOGOUT } from '../../actions';
 
-const Header = () => {
+const Header = (props: any) => {
   const { state, dispatch } = useContext(Store);
 
   useEffect(() => {
@@ -37,10 +37,11 @@ const Header = () => {
   const handleLogout = () => {
     localStorage.removeItem('accessToken');
     localStorage.removeItem('refreshToken');
-    return dispatch({
+    dispatch({
       type: LOGOUT,
       payload: { isLoggedIn: false, accessToken: '', refreshToken: '' },
     });
+    // props.history.push('/');
   };
 
   return (
