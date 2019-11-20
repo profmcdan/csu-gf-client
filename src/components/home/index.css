@@ -1,22 +1,23 @@
 .map-panel {
   display: flex;
   justify-content: space-between;
-  padding-top: 80px;
+  padding-top: 100px;
+  padding-bottom: 100px;
   flex-wrap: wrap;
 }
 
 .connect {
-  padding-top: 120px;
-  width: 33%;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .connect-text {
   color: #ab4c38;
   font-size: 34px;
-  font-style: oblique;
   font-weight: bold;
+  font-family: 'Merriweather', serif;
 }
-.membership-panel {
+.membership-panel,.color-panel {
   background-color: #fefbf6;
   padding-top: 50px;
   padding-bottom: 50px;
@@ -41,16 +42,16 @@
 .membership-header {
   color: #ab4c38;
   font-size: 29px;
-  font-style: oblique;
-  font-weight: bold;
+  font-family: 'Merriweather', serif;
+  font-weight: 700;
   text-align: center;
 }
 
 .value-header {
   color: #ab4c38;
   font-size: 22px;
-  font-style: oblique;
-  font-weight: bold;
+  font-family: 'Merriweather', serif;
+  font-weight: 700;
 }
 .testimonial-panel {
   padding-top: 60px;
@@ -75,7 +76,6 @@
 
 .test-card {
   background-color: #fefbf6;
-  width: 30%;
 }
 
 .testi-test {
@@ -85,4 +85,47 @@
   margin-bottom: 10px;
   text-justify: auto;
   font-size: 16px;
+}
+.btn-rounded {
+  color: #ffffff;
+  letter-spacing: 1px;
+  border-radius: 5px;
+  transition: all 0.3s ease 0s;
+  background-color: #ab4c38;
+  border: 1px solid #ab4c38;
+  font-size: 14px;
+}
+.btn-main{
+  line-height: 30px;
+  font-weight: bold;
+}
+.btn-rounded.btn-main:hover {
+  background-color: #0c4669;
+  border-color: #0c4669;
+  color: #fff;
+}
+
+.professional-list h3:not(.professional-list-btn-wrapper):after{
+  content: ",";
+}
+.resource-title-container h3{
+  font-size: 20px;
+  font-weight: 700
+}
+
+@media screen and (max-width: 768px) {
+  .connect{
+    padding-top: 10px;
+  }
+  .map-panel{
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .memberships{
+    width:100%;
+  }
+  .membership-values p{
+    text-align: center;
+  }
 }

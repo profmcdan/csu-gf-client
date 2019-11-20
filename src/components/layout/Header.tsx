@@ -47,9 +47,8 @@ const Header = (props: any) => {
   return (
     <Fragment>
       {console.log('New State ==> ', state)}
-      <div className="container-fluid main-bar">
-        <div>
-          <Navbar bg="light" expand="lg">
+      <div className="main-bar">
+          <Navbar bg="white" expand="lg">
             <Navbar.Brand href="#!">
               <Link to="/">
                 <img src={Logo} height="30px" width="30px" alt="CSU-GF" />
@@ -58,16 +57,16 @@ const Header = (props: any) => {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="mr-auto">
-                <Nav.Link href="#!">
+                <Nav.Link href="/" className="px-4">
                   <Link to="/">Home</Link>
                 </Nav.Link>
-                <Nav.Link href="#!">
+                <Nav.Link href="/members" className="px-4">
                   <Link to="/members">Members</Link>
                 </Nav.Link>
-                <Nav.Link href="#!">
-                  <Link to="/eventz">Eventz</Link>
+                <Nav.Link href="/eventz" className="px-4">
+                  <Link to="/eventz">Events</Link>
                 </Nav.Link>
-                <Nav.Link href="#!">
+                <Nav.Link href="/resources" className="px-4">
                   <Link to="/resources">Resources</Link>
                 </Nav.Link>
               </Nav>
@@ -101,12 +100,12 @@ const Header = (props: any) => {
                   ) : (
                     <Fragment>
                       <li className="nav-item">
-                        <Link className="nav-link" to="/login">
+                        <Link className="nav-link px-md-4 px-4" to="/login">
                           <span className="nav-text">Login</span>
                         </Link>
                       </li>
                       <li className="nav-item">
-                        <Link className="nav-link btn-rounded" to="/register">
+                        <Link className="nav-link btn-rounded px-4 py-2" to="/register">
                           <span className="nav-text-white">Get Started</span>
                         </Link>
                       </li>
@@ -116,7 +115,6 @@ const Header = (props: any) => {
               </div>
             </Navbar.Collapse>
           </Navbar>
-        </div>
       </div>
     </Fragment>
   );

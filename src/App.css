@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather|Open+Sans&display=swap');
+
 .App {
   text-align: center;
 }
@@ -21,8 +23,39 @@
   color: #09d3ac;
 }
 
+body{
+  min-height: 100vh;
+}
 .main-bar {
   background-color: white;
-  border-bottom: 1px solid wheat;
-  box-shadow: 5px 5px #ffafaf;
+  /*border-bottom: 1px solid wheat;*/
+  /*box-shadow: 5px 5px #ffafaf;*/
+  box-shadow: 0px 0px 10px 0.2px rgba(0, 0, 0, 0.2);
+}
+
+.text-color-secondary, .text-csu-blue{
+  color: #0c4669;
+}
+.text-color-primary{
+  color: #ab4c38;
+}
+.text-color-primary-alt{
+  color: #f5c39a;
+}
+
+.bg-color-default{
+  background-color: #fefbf6;
+}
+.text-header{
+  color: #ab4c38;
+  font-size: 29px;
+  font-weight: 700;
+  text-align: center;
+  font-family: 'Merriweather', serif;
+}
+*{
+  font-family: 'Open Sans', sans-serif;
+}
+h1,h2,h3,h4,h5{
+  font-family: 'Merriweather', serif;
 }

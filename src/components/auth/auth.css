@@ -9,7 +9,7 @@
 .form-header-text {
     color: #ab4c38;
     font-size: 24px;
-    font-style: oblique;
+    font-family: 'Merriweather', serif;
     font-weight: bold;
 }
 .card-header.form-header {
@@ -41,9 +41,11 @@
 }
 .btn-fb{
     background-color: #345a95;
+    border-color: #345a95;
 }
 .btn-google{
     background-color: #dd3127;
+    border-color: #dd3127;
 }
 .social-login .btn{
     width:150px;
